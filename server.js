@@ -29,7 +29,7 @@ app.get('/get-jareds-name', (req, res) => {
     rollbar.info('someone wanted to know Jared\'s name')
 })
 
-app.get('/must-put-hunter', (req, res) => {
+app.post('/must-put-hunter', (req, res) => {
     let input = req.body.input
 
     if (input === "hunter") {
