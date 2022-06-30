@@ -29,6 +29,22 @@ app.get('/get-jareds-name', (req, res) => {
     rollbar.info('someone wanted to know Jared\'s name')
 })
 
+app.get('/must-put-hunter', (req, res) => {
+    let input = req.body.input
+
+    if (input === "hunter") {
+        rollbar.log('Hunter\'s info put')
+    } else if (input === "") {
+        rollbar.critical("THEY DIDNT DO ANY INPUT!")
+    } else if (input === "rick") {
+        rollbar.warning("Dont you rr me!")
+    } else {
+        rollbar.error("Didnt put the word hunter in")
+    }
+
+    res.send('input received')
+})
+
 const port = process.env.PORT || 4004
 
 app.listen(port, () => {
