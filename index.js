@@ -13,7 +13,7 @@ function hunterButtonClickHandler() {
     body = {}
     body.input = hunterInput.value
 
-    axios.put("/must-put-hunter", body)
+    axios.post("/must-put-hunter", body)
     .then((response) => {
         alert(response.data)
     })
