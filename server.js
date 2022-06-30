@@ -13,15 +13,15 @@ const app = express()
 app.use(cors())
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, './index.html'));
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.get('/css', (req, res) => {
-    res.sendFile(path.join(__dirname, './index.css'))
+    res.sendFile(path.join(__dirname, 'index.css'))
 })
 
 app.get('/js', (req, res) => {
-    res.sendFile(path.join(__dirname, './index.js'))
+    res.sendFile(path.join(__dirname, 'index.js'))
 })
 
 app.get('/get-jareds-name', (req, res) => {
