@@ -4,7 +4,7 @@ const cors = require('cors')
 
 var Rollbar = require('rollbar')
 var rollbar = new Rollbar({
-  accessToken: 'e239878d092849c598943b1ee9ac83e6',
+  accessToken: '49a28848f7fa41edbb45561ef19ccfaa',
   captureUncaught: true,
   captureUnhandledRejections: true,
 })
