@@ -10,7 +10,7 @@ function jaredButtonClickHandler() {
 }
 
 function hunterButtonClickHandler() {
-    body = {}
+    let body = {}
     body.input = hunterInput.value
 
     axios.post("/must-put-hunter", body)
